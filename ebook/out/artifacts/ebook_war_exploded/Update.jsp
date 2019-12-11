@@ -42,7 +42,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <form class="form-horizontal" action="updateServlet">
-  		<div class="panel-heading"><h2>修改书本</h2></div>
+  		<div class="panel-heading">
+			<h2>修改书本</h2>
+		</div>
   		<input type="hidden" value="${idid}" name="id">
   		<div class="form-group">
 			<label class="col-sm-1 control-label">书本编号:</label>

@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.BookingDao;
 import entity.Booking;
 
+
+@WebServlet("/deleteServlet")
 public class deleteServlet extends HttpServlet {
 
 	/**
@@ -59,6 +62,7 @@ public class deleteServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		
 		BookingDao rms=new BookingDao();

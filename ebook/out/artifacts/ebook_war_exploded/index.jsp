@@ -68,8 +68,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		
 		<!-- 表格 -->
-    	<div class="panel-heading"><h2>电子图书列表</h2></div><a href="insert.jsp"><input id="xinzeng" class="btn btn-primary" type="button" value="新增图书"></a>
-    	<tr><td>书品编号</td><td>书名</td><td>摘要</td><td>上传人</td><td>上传时间</td><td>操作</td></tr>
+    	<div class="panel-heading">
+			<h2>电子图书列表</h2>
+		</div>
+		<a href="insert.jsp">
+			<input id="xinzeng" class="btn btn-primary" type="button" value="新增图书">
+		</a>
+    	<tr>
+			<td>书品编号</td>
+			<td>书名</td>
+			<td>摘要</td>
+			<td>上传人</td>
+			<td>上传时间</td>
+			<td>操作</td>
+		</tr>
     	<c:forEach items="${list}" var="gd">
           <tr>
           	<td>${gd.categoryId}</td>

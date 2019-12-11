@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.BookingDao;
 import entity.Booking;
 
+@WebServlet("/insertServlet")
 public class insertServlet extends HttpServlet {
 
 	/**
@@ -64,12 +66,12 @@ public class insertServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		BookingDao rms=new BookingDao(); 
-		  int categoryId=Integer.parseInt(request.getParameter("categoryId"));
-		  String title=request.getParameter("title");
-		  String summary=request.getParameter("summary");
-		  String uploaduser=request.getParameter("uploaduser");
-		  String createdate=request.getParameter("createdate");
-		  Booking rm=new Booking();
+		int categoryId=Integer.parseInt(request.getParameter("categoryId"));
+		String title=request.getParameter("title");
+		String summary=request.getParameter("summary");
+		String uploaduser=request.getParameter("uploaduser");
+		String createdate=request.getParameter("createdate");
+		Booking rm=new Booking();
 			  rm.setCategoryId(categoryId);
 			  rm.setTitle(title);
 			  rm.setSummary(summary);

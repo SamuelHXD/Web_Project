@@ -14,7 +14,7 @@ public class BaseDao {
 	 *
 	 */
 		private String driver ="com.mysql.jdbc.Driver";
-		private String url="jdbc:mysql://localhost:3306/ebookentry?characterEncoding=utf-8";
+		private String url="jdbc:mysql://localhost:3306/ebookentry?characterEncoding=utf-8&useSSL=false";
 		private String name="root";
 		private String pwd="123456";
 	      Connection conn=null;
@@ -39,8 +39,8 @@ public class BaseDao {
 		}
 		
 		/****
-		 * 
-		 * @param 关闭数据库连接
+		 * 关闭数据库连接
+		 * @param
 		 */
 		protected void closeAll(Connection conn ,PreparedStatement ps,ResultSet rs){		
 			if(rs!=null)
