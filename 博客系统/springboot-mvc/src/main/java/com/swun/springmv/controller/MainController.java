@@ -28,7 +28,7 @@ public class MainController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
-        return "index";
+        return "admin/index";
     }
 
     @RequestMapping(value = "/admin/users", method = RequestMethod.GET)
